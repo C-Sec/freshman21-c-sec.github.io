@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Snort: Установка и первичная настройка Snort"
-date:   2017-02-01 06:11:00
+date:   2017-02-01 02:00:00
 categories: Snort
 tags: Snort IDS IPS Installation
 author: RAlexeev

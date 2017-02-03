@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Snort: Введение"
-date:   2017-02-01 06:11:00
+date:   2017-02-01 01:00:00
 categories: Snort
 tags: Snort IDS IPS
 author: RAlexeev
