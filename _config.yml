@@ -45,6 +45,7 @@ locales:
       Home: "Home"
       About: "About"
       Guestbook: "Guestbook"
+      Collections: "Collections"
       Subscribe: "Subscribe"
       ReadMore: "Read more"
     cn:
@@ -138,6 +139,7 @@ locales:
       Home: "Домой"
       About: "О блоге"            # = 'About blog'
       Guestbook: "Гостевая книга"
+      Collections: "Коллекции"
       Subscribe: "Подписаться"
       ReadMore: "Читать далее"
       months:

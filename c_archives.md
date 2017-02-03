@@ -2,6 +2,7 @@
 layout: page
 title: Archives
 permalink: /archives/
+icon: fa-archive
 ---
 
 <ul class="tags-box">

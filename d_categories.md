@@ -2,6 +2,7 @@
 layout: page
 title: Categories
 permalink: /categories/
+icon: fa-th-list
 ---
 
 <ul class="tags-box">
@@ -23,4 +24,3 @@ permalink: /categories/
 <span>No posts</span>
 {% endif %}
 </ul>
-
