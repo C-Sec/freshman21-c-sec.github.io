@@ -2,7 +2,7 @@
 title: Freshman21
 tagline: Another Jekyll theme, Freshman twenty-first
 author: Lijia Yu
-email: yu@lijiayu.net
+email: admin@c-sec.ru
 description: "Roman Alexeev web-site." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
 keywords: "Jekyll, theme, Freshman21"
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -10,7 +10,6 @@ url: "https://C-Sec.github.io" # the base hostname & protocol for your site
 locale: en_US
 
 ### Personal info and site tools info:
-email: admin@c-sec.ru
 twitter_username: yulijia
 github_username:  RAlexeev
 disqus_shortname: c-sec-ru

@@ -2,11 +2,17 @@
   <h4>{{ site.locales[site.default_locale].Aboutme }}</h4>
   <img title="{{site.author}}" src="{{site.aboutme_photo}}" alt="{{site.author}}"/>
   <span>{{site.aboutme}}</span>
-  <br>
+
+  {% if site.github_username %}
+    <a href="https://github.com/{{site.github_username}}" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+  {% endif %}
+
+  
+  <br />
 
   {% if site.ShowContactInfo %}
 
-    You can contact me via: <br>
+    You can contact me via: <br />
 
     {% if site.github_username %}
       <a href="https://github.com/{{site.github_username}}" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
