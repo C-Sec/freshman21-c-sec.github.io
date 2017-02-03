@@ -169,26 +169,27 @@ sudo dpkg -i snort_2.9.8.0-1_amd64.deb
 
 Но в данном случае настройки будут оставаться в силе только до перезагрузки ОС, поэтому лучшим вариантом будет добавить команды настройки сетевого интерфейса одним из следующих способов:
 
-*  Открываем файл **/etc/network/interfaces** (`sudo gedit /etc/network/interfaces`) с настройками конфигурации сети Ethernet и добавляем в конец файла следующие команды для сетевого интерфейса eth0, который Snort будет слушать:
+* Открываем файл **/etc/network/interfaces** (`sudo gedit /etc/network/interfaces`) с настройками конфигурации сети Ethernet и добавляем в конец файла следующие команды для сетевого интерфейса eth0, который Snort будет слушать:
 
-        ```
-        # The primary network interface
-        auto eth0
-        iface eth0 inet dhcp
-        post-up ethtool --offload eth0 rx off tx off
-        post-up ethtool -K eth0 gso off
-        post-up ethtool -K eth0 gro off
-        post-up ethtool -K eth0 lro off
-        ```
+  ```
+  # The primary network interface
+  auto eth0
+  iface eth0 inet dhcp
+  post-up ethtool --offload eth0 rx off tx off
+  post-up ethtool -K eth0 gso off
+  post-up ethtool -K eth0 gro off
+  post-up ethtool -K eth0 lro off
+  ```
 
-*  Либо открываем файл **/etc/rc.local** (`sudo gedit /etc/rc.local`) с автозагрузками и добавляем следующие строчки до "exit 0":
+* Либо открываем файл **/etc/rc.local** (`sudo gedit /etc/rc.local`) с автозагрузками и добавляем следующие строчки до "exit 0":
 
-        ```
-        ethtool --offload eth0 rx off tx off
-        ethtool -K eth0 gso off
-        ethtool -K eth0 gro off
-        ethtool -K eth0 lro off
-        ```
+  ```
+  ethtool --offload eth0 rx off tx off
+  ethtool -K eth0 gso off
+  ethtool -K eth0 gro off
+  ethtool -K eth0 lro off
+  ```
+
 
 Текущие значения параметров можно посмотреть с помощью команды `ethtool -k eth0`. Если параметр обозначен как [fixed], то это означает, что значение параметра нельзя изменить с помощью ethtool. Часто многие параметры обозначены [fixed], когда ОС запушена в виртуальной машине (например, VMWare или VirtualBox) и гостевая ОС не в состоянии изменить параметры хостовой ОС.
 
@@ -206,3 +207,37 @@ iface eth1 inet static
     netmask 255.255.255.0
     gateway 192.168.0.1
 ```
+
+
+1. lorem ipsum
+
+  ```ruby
+resources :dolor
+  ```
+
+   1. sit amet
+
+      ```
+      ethtool --offload eth0 rx off tx off
+      ethtool -K eth0 gso off
+      ethtool -K eth0 gro off
+      ethtool -K eth0 lro off
+      ```
+
+   1. sed do
+
+1. eiusmod
+
+
+* some text     =>  use 2 spaces indentation e.g.
+
+  ```
+  $ gem install beerdb
+  $ gem install beerdb
+  ```
+
+*   some text   =>  use 4 spaces indentation e.g.
+
+    ```
+    $ gem install beerdb
+    ```
