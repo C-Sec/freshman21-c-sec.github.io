@@ -1,14 +1,35 @@
 <footer class="site-footer">
 
-  <p>Copyright &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a></p>
-  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
-  on 
+  <p>Copyright &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a>
+
+  {% if site.ShowContactInfo == "True" %}
+
+    | Связаться со мной:
+
+    {% if site.vk_username %}
+      <a href=" https://vk.com/{{site.vk_username}}" title="VK"><i class="fa fa-vk-square fa-lg" aria-hidden="true"></i></a>
+    {% endif %}
+
+    {% if site.email %}
+      <a href="mailto:{{site.email}}" title="mailto: {{site.email}}"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i></a>
+    {% endif %}
+
+    {% if site.github_username %}
+      <a href="https://github.com/{{site.github_username}}" title="GitHub: {{site.github_username}}"><i class="fa fa-github-square fa-lg" aria-hidden="true">></i></a>
+    {% endif %}
+
+  {% endif %}
+
+  </p>
+
+  <p>Сайт работает на <a href="https://github.com/jekyll/jekyll">Jekyll</a>
+  и размещён на
   {% if site.github_username %}
   <a href="https://github.com/">Github</a>
   {% else %}
-  GitHub 
+  GitHub
   {% endif %}
-  | Theme <a href="https://github.com/yulijia/freshman21/">Freshman21</a> Design by <a href="http://yulijia.net">Lijia Yu</a>  
+  | Тема <a href="https://github.com/yulijia/freshman21/">Freshman21</a> разработана <a href="http://yulijia.net">Lijia Yu</a>
 
 
   <div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
@@ -16,7 +37,7 @@
   </div>
 
   <script src="{{ "/js/jquery-1.9.1.min.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "/js/totop.js" | prepend: site.baseurl }}"></script>  
+  <script src="{{ "/js/totop.js" | prepend: site.baseurl }}"></script>
 
 
 
