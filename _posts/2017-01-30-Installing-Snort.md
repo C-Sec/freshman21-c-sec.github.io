@@ -26,26 +26,26 @@ author: RAlexeev
 
 `sudo apt-get update && sudo apt-get upgrade`
 
-* apt-get update - обновление индекса пакетов
-* apt-get upgrade - обновление пакетов
+* **apt-get update** - обновление индекса пакетов
+* **apt-get upgrade** - обновление пакетов
 
 
 Устанавливаем обязательные пререквизиты для Snort:
 
 `sudo apt-get -y install build-essential libpcap-dev libpcre3-dev libdumbnet-dev zlib1g-dev`
 
-* build-essential - предоставляет инструменты, необходимых для сборки пакетов Debian;
-* libpcap-dev - библиотека для захвата сетевого трафика, необходима для Snort;
-* libpcre3-dev - библиотека функций для поддержки регулярных выражений, необходима для Snort;
-* libdumbnet-dev - библиотека, ещё известная как libdnet-dev, предоставляющая упрощённый, портативный интерфейс для различных низкоуровневых (interface to several low-level networking routines);
-* zlib1g-dev - библиотека, реализующая метод сжатия deflate, необходима для Snort;
+* **build-essential** - предоставляет инструменты, необходимых для сборки пакетов Debian;
+* **libpcap-dev** - библиотека для захвата сетевого трафика, необходима для Snort;
+* **libpcre3-dev** - библиотека функций для поддержки регулярных выражений, необходима для Snort;
+* **libdumbnet-dev** - библиотека, ещё известная как libdnet-dev, предоставляющая упрощённый, портативный интерфейс для различных низкоуровневых (interface to several low-level networking routines);
+* **zlib1g-dev** - библиотека, реализующая метод сжатия deflate, необходима для Snort;
 
 Устанавливаем необходимые для DAQ парсеры:
 
 `sudo apt-get -y install bison flex`
 
-* bison - генератор анализаторов синтаксиса (parser) выражений;
-* flex - инструмент для генерации программ, распознающих заданные образцы в тексте.
+* **bison** - генератор анализаторов синтаксиса (parser) выражений;
+* **flex** - инструмент для генерации программ, распознающих заданные образцы в тексте.
 
 Устанавливаем дополнительные (рекомендуемые) программы:
 
@@ -156,10 +156,7 @@ sudo dpkg -i snort_2.9.8.0-1_amd64.deb
 ```
 
 
-
-
 ### Конфигурация сетевого интерфейса, рекомендуемая для Snort
-
 
 Согласно рекомендации из Руководство Snort следует убедиться, что сетевая карта не обрезает слишком большие пакеты (в сетях Ethernet длина которых превышает 1518 байт). Для этого произведём оптимизацию сетевых интерфейсов с помощью утилиты ethtool. Если нужно, устанавливаем **ethtool** (`sudo apt-get -y install ethtool`) и для настройки параметров выполняет в терминале следующие команды:
 
@@ -174,24 +171,24 @@ sudo dpkg -i snort_2.9.8.0-1_amd64.deb
 
 *  Открываем файл **/etc/network/interfaces** (`sudo gedit /etc/network/interfaces`) с настройками конфигурации сети Ethernet и добавляем в конец файла следующие команды для сетевого интерфейса eth0, который Snort будет слушать:
 
-  ```bash
-  # The primary network interface
-  auto eth0
-  iface eth0 inet dhcp
-  post-up ethtool --offload eth0 rx off tx off
-  post-up ethtool -K eth0 gso off
-  post-up ethtool -K eth0 gro off
-  post-up ethtool -K eth0 lro off
-  ```
+        ```
+        # The primary network interface
+        auto eth0
+        iface eth0 inet dhcp
+        post-up ethtool --offload eth0 rx off tx off
+        post-up ethtool -K eth0 gso off
+        post-up ethtool -K eth0 gro off
+        post-up ethtool -K eth0 lro off
+        ```
 
 *  Либо открываем файл **/etc/rc.local** (`sudo gedit /etc/rc.local`) с автозагрузками и добавляем следующие строчки до "exit 0":
 
-  ```bash
-  ethtool --offload eth0 rx off tx off
-  ethtool -K eth0 gso off
-  ethtool -K eth0 gro off
-  ethtool -K eth0 lro off
-  ```
+        ```
+        ethtool --offload eth0 rx off tx off
+        ethtool -K eth0 gso off
+        ethtool -K eth0 gro off
+        ethtool -K eth0 lro off
+        ```
 
 Текущие значения параметров можно посмотреть с помощью команды `ethtool -k eth0`. Если параметр обозначен как [fixed], то это означает, что значение параметра нельзя изменить с помощью ethtool. Часто многие параметры обозначены [fixed], когда ОС запушена в виртуальной машине (например, VMWare или VirtualBox) и гостевая ОС не в состоянии изменить параметры хостовой ОС.
 
