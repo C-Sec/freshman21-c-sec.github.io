@@ -3,16 +3,15 @@
   <img title="{{site.author}}" src="{{site.aboutme_photo}}" alt="{{site.author}}"/>
   <span>{{site.aboutme}}</span>
 
-  {% if site.github_username %}
-    <a href="https://github.com/{{site.github_username}}" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
-  {% endif %}
-
-  
   <br />
 
-  {% if site.ShowContactInfo %}
+  {% if site.ShowContactInfo == "True" %}
 
-    You can contact me via: <br />
+    Связаться со мной: <br />
+
+    {% if site.vk_username %}
+      <a href=" https://vk.com/{{site.vk_username}}" title="VK"><i class="fa fa-vk" aria-hidden="true"></i></a>
+    {% endif %}
 
     {% if site.github_username %}
       <a href="https://github.com/{{site.github_username}}" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
