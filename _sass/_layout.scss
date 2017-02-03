@@ -28,7 +28,7 @@
   line-height:56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  text-align:center; 
+  text-align:center;
   color: $grey-color;
 }
 
@@ -118,7 +118,7 @@
     color: $grey-color-dark;
   }
   li{
-    list-style: none; 
+    list-style: none;
   }
 
 }
@@ -133,7 +133,7 @@
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid $grey-color-light;
-  margin: $spacing-unit 0; 
+  margin: $spacing-unit 0;
   padding: $spacing-unit 0;
   font-size: 14px;
 }
@@ -146,6 +146,7 @@
 .page-content {
   padding: $spacing-unit 0;
   strong { font-weight: bold; }
+
 }
 
 .page-heading {
@@ -170,11 +171,10 @@
 .post-header {
   margin-bottom: $spacing-unit;
   time{
-    margin-left: 0px;
-    font-style: normal;
+      margin-left: 0px;
+      font-style: normal;
 
   }
-
 }
 
 .post-title {
@@ -196,13 +196,13 @@
   padding:20px 15px;
   li{
     padding-top:10px;
-    position:relative; 
-    list-style-type:none;  
+    position:relative;
+    list-style-type:none;
   }
 }
 
 #markdown-toc:before{
-  content:"Table of Contents";
+  content:"Содержание";
   font-weight: 700;
   padding-left:10px;
   border-bottom:5px solid $grey-color-light !important;
@@ -211,10 +211,11 @@
 }
 
 
+
 .post-content {
-  p { padding:$spacing-unit/5 0; } 
-  //  margin-bottom: $spacing-unit;
-  h1 { 
+  p { padding:$spacing-unit/5 0; }
+  //margin-bottom: $spacing-unit;
+  h1 {
     font-size: 38px;
     line-height:1em;
     @include media-query($on-laptop){
@@ -225,7 +226,6 @@
   h2 {
     font-size: 32px;
     line-height:1em;
-
     @include media-query($on-laptop) {
       font-size: 28px;
     }
@@ -321,5 +321,3 @@ q:after {
   color: #DD1144;
   font-weight:bold;
 }
-
-

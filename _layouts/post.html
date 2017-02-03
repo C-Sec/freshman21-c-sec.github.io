@@ -7,19 +7,45 @@ layout: default
     <h1 itemprop="name" class="post-title">{{ page.title }}</h1>
     <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
     <p class="post-meta">
-    {{ site.locales[site.default_locale].PostedInCategories }}
-    {% for cat in page.categories %}
-    <a href="{{site.baseurl}}/categories/#{{ cat }}">{{ cat }}</a>{% unless page.categories.last == cat %}, {% endunless %}
-    {% endfor %} 
-    {% if page.tags != empty %}
-    {{ site.locales[site.default_locale].Taggedwith }}
-    {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>{% unless page.tags.last == tag %}, {% endunless %}
-    {% endfor %}
-    {% endif %}
-    <time itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">
-    {{ site.locales[site.default_locale].PostDate }}{{ page.date | date: "%b %-d, %Y" }}
-    </time>
+      {{ site.locales[site.default_locale].PostedInCategories }}
+      {% for cat in page.categories %}
+        <a href="{{site.baseurl}}/categories/#{{ cat }}">{{ cat }}</a>{% unless page.categories.last == cat %}, {% endunless %}
+      {% endfor %}
+      {% if page.tags != empty %}
+        {{ site.locales[site.default_locale].Taggedwith }}
+        {% for tag in page.tags %}
+          <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>{% unless page.tags.last == tag %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+      <time itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+        {{ site.locales[site.default_locale].PostDate }}
+        {% if site.locales[site.default_locale].months %}
+          {% case site.default_locale %}
+          {% when 'ru' %}
+            {{ page.date | date: "%-d" }}
+            {% assign month = page.date | date: '%-m' %}
+            {% case month %}
+              {% when '1' %} {{ site.locales[site.default_locale].months.January }}
+              {% when '2' %} {{ site.locales[site.default_locale].months.February }}
+              {% when '3' %} {{ site.locales[site.default_locale].months.March }}
+              {% when '4' %} {{ site.locales[site.default_locale].months.April }}
+              {% when '5' %} {{ site.locales[site.default_locale].months.May }}
+              {% when '6' %} {{ site.locales[site.default_locale].months.June }}
+              {% when '7' %} {{ site.locales[site.default_locale].months.July }}
+              {% when '8' %} {{ site.locales[site.default_locale].months.August }}
+              {% when '9' %} {{ site.locales[site.default_locale].months.September }}
+              {% when '10' %} {{ site.locales[site.default_locale].months.October }}
+              {% when '11' %} {{ site.locales[site.default_locale].months.November }}
+              {% when '12' %} {{ site.locales[site.default_locale].months.December }}
+            {% endcase %}
+            {{ page.date | date: "%Y" }}
+          {% else %}
+            {{ page.date | date: "%b %-d, %Y" }}
+          {% endcase %}
+        {% else %}
+          {{ page.date | date: "%b %-d, %Y" }}
+        {% endif %}
+      </time>
     </p>
   </header>
 
@@ -32,4 +58,3 @@ layout: default
 
 {% include page_pagination.html%}
 {% include comments.html %}
-

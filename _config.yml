@@ -3,7 +3,7 @@ title: Freshman21
 tagline: Another Jekyll theme, Freshman twenty-first
 author: Lijia Yu
 email: yu@lijiayu.net
-description: "Freshman21 is a Jekyll blog theme." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+description: "Roman Alexeev web-site." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
 keywords: "Jekyll, theme, Freshman21"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://C-Sec.github.io" # the base hostname & protocol for your site
@@ -11,13 +11,13 @@ locale: en_US
 
 ### Personal info and site tools info:
 twitter_username: yulijia
-github_username:  yulijia
-disqus_shortname: freshman21
+github_username:  RAlexeev
+disqus_shortname: c-sec-ru
 favicon:     "/images/favicon.ico"
 aboutme: Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it. # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
-google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
-
+google_analytics_key: UA-91079618-1 # put YOUR key here to enable tracking! (blank to disable)
+yandex_metrika_id: 42485424
 
 ### Site setting:
 ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown where ShowContactInfo == True
@@ -33,8 +33,10 @@ locales:
       Copyright_Notice: "Copyright Notice"
       Recent_Posts: "Recent Posts"
       Tags: "Tags"
-      Previous: "Older"
-      Next: "Newer"
+      PreviousPost: "Previous Page"
+      NextPost: "Next Page"
+      PreviousPage: "Previous Post"
+      NextPage: "Next Post"
       PostedInCategories: "Posted in"
       Taggedwith: "and tagged"
       PostDate: "on "
@@ -43,6 +45,7 @@ locales:
       About: "About"
       Guestbook: "Guestbook"
       Subscribe: "Subscribe"
+      ReadMore: "Read more"
     cn:
       Aboutme: "关于我"
       Archives: "存档"
@@ -121,18 +124,34 @@ locales:
       Blogroll: "Ссылки" # = 'Links'
       Categories: "Разделы"
       Copyright_Notice: "Авторские права"
-      Recent_Posts: "Свежие посты"
-      Tags: "Теги"
-      Previous: "Предыдущий пост"          # = 'Previous post'
-      Next: "Следующий пост"               # = 'Next post'
+      Recent_Posts: "Свежие записи"
+      Tags: "Метки"
+      PreviousPost: "Предыдущие записи"          # = 'Previous post'
+      NextPost: "Следующие записи"               # = 'Next post'
+      PreviousPage: "Предыдущая запись"          # = 'Previous post'
+      NextPage: "Следующая запись"               # = 'Next post'
       PostedInCategories: "Опубликовано в" # = 'Posted in'
-      Taggedwith: "с тегами"
+      Taggedwith: "с метками"
       PostDate: ""
-      Google_search: "Поиск на Google"
+      Google_search: "Поиск по сайту"
       Home: "Домой"
       About: "О блоге"            # = 'About blog'
       Guestbook: "Гостевая книга"
       Subscribe: "Подписаться"
+      ReadMore: "Читать далее"
+      months:
+        January: "января"
+        February: "февраля"
+        March: "марта"
+        April: "апреля"
+        May: "мая"
+        June: "июня"
+        July: "июля"
+        August: "августа"
+        September: "сентября"
+        October: "октября"
+        November: "ноября"
+        December: "декабря"
     tr:
       Aboutme: "Hakkımda"
       Archives: "Arşivler"
@@ -169,6 +188,10 @@ markdown: kramdown
 kramdown:
         input: GFM
         syntax_highlighter: rouge
-gems: [jekyll-paginate]
+
+gems:
+  - jekyll-gist
+  - jekyll-paginate
+
 paginate: 5
 excerpt_separator: <!-- more -->
