@@ -207,37 +207,3 @@ iface eth1 inet static
     netmask 255.255.255.0
     gateway 192.168.0.1
 ```
-
-
-1. lorem ipsum
-
-  ```ruby
-resources :dolor
-  ```
-
-   1. sit amet
-
-      ```
-      ethtool --offload eth0 rx off tx off
-      ethtool -K eth0 gso off
-      ethtool -K eth0 gro off
-      ethtool -K eth0 lro off
-      ```
-
-   1. sed do
-
-1. eiusmod
-
-
-* some text     =>  use 2 spaces indentation e.g.
-
-  ```
-  $ gem install beerdb
-  $ gem install beerdb
-  ```
-
-*   some text   =>  use 4 spaces indentation e.g.
-
-    ```
-    $ gem install beerdb
-    ```
