@@ -10,15 +10,19 @@
     Связаться со мной: <br />
 
     {% if site.vk_username %}
-      <a href=" https://vk.com/{{site.vk_username}}" title="VK"><i class="fa fa-vk-square fa-3x" aria-hidden="true"></i></a>
+      <a href=" https://vk.com/{{ site.vk_username }}" title="VK"><i class="fa fa-vk-square fa-3x" aria-hidden="true"></i></a>
     {% endif %}
 
     {% if site.email %}
-      <a href="mailto:{{site.email}}" title="mailto: {{site.email}}"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i></a>
+      <a href="mailto:{{ site.email }}" title="mailto: {{site.email}}"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i></a>
     {% endif %}
 
     {% if site.github_username %}
-      <a href="https://github.com/{{site.github_username}}" title="GitHub: {{site.github_username}}"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+      <a href="https://github.com/{{ site.github_username }}" title="GitHub: {{site.github_username}}"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+    {% endif %}
+
+    {% if site.telegram_username %}
+      <a href="https://telegram.me/{{ site.telegram_username }}" title="Telegram: {{ site.telegram_username }}"><i class="fa fa-telegram fa-3x" aria-hidden="true"></i></a>
     {% endif %}
 
   {% endif %}
