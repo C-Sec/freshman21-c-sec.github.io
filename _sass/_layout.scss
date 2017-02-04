@@ -305,7 +305,32 @@ time{
   }
 }
 
+/**
+ * Image in circle
+ */
 
+.img-about
+{
+  height: 128px;
+  width: 128px;
+  border-radius:50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/**
+ * Обтекание картинок
+ */
+
+.leftimg {
+  float:left; /* Выравнивание по левому краю */
+  margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+}
+
+.rightimg  {
+  float: right; /* Выравнивание по правому краю  */
+  margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+}
 
 /**
  * New style for quotation.
