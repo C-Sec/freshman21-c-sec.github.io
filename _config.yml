@@ -9,6 +9,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://C-Sec.github.io" # the base hostname & protocol for your site
 locale: en_US
 
+#permalink: /:categories/:year/:month/:day/:title/ # By default
+permalink: /:year/:month/:day/:title/
+
+
 ### Personal info and site tools info:
 #twitter_username: yulijia
 github_username:  RAlexeev

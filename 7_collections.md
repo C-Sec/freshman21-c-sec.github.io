@@ -7,10 +7,42 @@ icon: fa-bookmark
 ---
 
 
-![Jekyll](http://i.imgur.com/aJlARiW.png){:height="230px" width="498px"}
+* Table of Contents
+{:toc}
 
-<img style="float: right;" src="http://i.imgur.com/aJlARiW.png">
+## Программы
 
-<img src="http://i.imgur.com/aJlARiW.png" width="498" height="230" />
+*
 
-<img src="http://i.imgur.com/aJlARiW.png" width="100" height="100" />
+*
+
+*
+
+## Программирование
+
+### Python
+
+*
+
+*
+
+*
+
+### Android
+
+*
+
+*
+
+*
+
+### C/C++
+
+*
+
+*
+
+*
+
+
+## Комментарии
