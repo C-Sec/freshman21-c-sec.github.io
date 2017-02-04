@@ -7,6 +7,13 @@ icon: fa-heart
 ---
 
 
+## Связаться со мной
+
+* GitHub：[RAlexeev](https://github.com/RAlexeev)
+* Email : [admin@c-sec.ru](mailto:admin@c-sec.ru)
+* [ВКонтакте](https://vk.com/princer)
+
+
 ## Платформа для блога
 
 ![Jekyll](http://i.imgur.com/aJlARiW.png){: height="70px" width="159px" .leftimg}
